@@ -91,49 +91,34 @@ void SortingArray() { // Bubble Sort Ascending
     getch();
 }
 
-void mPertama(string pesan){
-system("cls");
-cout<<"hallo saya menu "<<pesan;
-getch();
-}
-
-
 int main() {
-char pl;
-do
-{
-    TampilMenu();
-    pl=getch();
-  switch (pl)
-  {
-   case '1':
-    /* code */
-    InputArray();
-    break;
-   case '2':
-    OutputArray();
-    /* code */ 
-    break;  
-   case '3':
-    SortingArray();
-    /* code */
-    break;  
-   case '4':
-    Info();
-    /* code */
-    break;  
-  case '5':
-    /* code */
-    break;
-  
-  default:
-    system("cls");
-    cout<<"Pilihan Tidak tersedia";
-    getch();
-    break;
-  }
+    char pilihan;
+    do {
+        TampilMenu();
+        pilihan = getch(); // baca satu karakter saja tanpa enter
+        switch (pilihan) {
+            case '1':
+                InputArray();
+                break;
+            case '2':
+                OutputArray();
+                break;
+            case '3':
+                SortingArray();
+                break;
+            case '4':
+                Info();
+                break;
+            case '5':
+                break;
+            default:
+                system("cls");
+                cout << "Pilihan tidak tersedia!";
+                getch();
+                break;
+        }
+    } while (pilihan != '5');
+    cout << "\n\nKELUAR DARI PROGRAM!\n";
 
-
-} while (pl!='5');
-  return 0;
+return 0;
 }
