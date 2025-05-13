@@ -1,22 +1,26 @@
 #include <iostream>
-#include <conio.h>
+#include <conio.h> //getch
 using namespace std;
 
-void info(){
-  system("cls");
-  cout<<"Indonesia Hebat, Poliban Juara";
-getch();
+void TampilMenu() {
+    system("cls");
+    cout << "APLIKASI MENU ARRAY\n";
+    cout << "==============================\n";
+    cout << "1. Input Array\n";
+    cout << "2. Output Array\n";
+    cout << "3. Shorting Array (Ascending)\n";
+    cout << "4. Info\n";
+    cout << "5. Exit\n";
+    cout << "Pilih menu (1-5): ";
 }
-void dMenu(){
-system("cls");
-cout<<"Aplikasi Tampilan Menu"<<"\n";       
-cout<<"1. Menu Pertama"<<"\n";            
-cout<<"2. Menu Kedua"<<"\n";            
-cout<<"3. Menu Ketiga"<<"\n";           
-cout<<"4. Informasi"<<"\n";            
-cout<<"5. Exit"<<"\n";           
-cout<<"Masukan angka :";        
 
+void Info() {
+    system("cls");
+    cout << "NAMA                      NIM\n";
+    cout << "Muhammad Imam Nurrahman   C030324038\n";
+    cout << "Muhammad Tarmizi          C030324046\n";
+    cout << "Muhammad Lathif           C030324090\n";
+    getch();
 }
 
 void mPertama(string pesan){
@@ -30,7 +34,7 @@ int main() {
 char pl;
 do
 {
-    dMenu();
+    TampilMenu();
     pl=getch();
   switch (pl)
   {
@@ -47,7 +51,7 @@ do
     /* code */
     break;  
    case '4':
-    info();
+    Info();
     /* code */
     break;  
   case '5':
